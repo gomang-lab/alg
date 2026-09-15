@@ -103,7 +103,7 @@ class Infix2Postfix:
         self.stack = []
         self.output = []
         tokens = self.tokenize(expression)
-
+        
         for token in tokens:
             if self.is_operand(token):
                 self.output.append(token)
