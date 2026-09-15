@@ -38,6 +38,22 @@ for token in postfix:
         stack에 push
 
 최종 stack[0]이 결과
+
+거듭제곱에 경우
+왼쪽 결합 연산자 (* / + -) → 우선순위가 같거나 높으면 pop
+오른쪽 결합 연산자 (^) → 우선순위가 높을 때만 pop
+
+def is_right_associative(self, op):
+    return op == '^'   # ^만 오른쪽 결합
+
+# 연산자 처리 부분
+while (self.stack and self.stack[-1] != '(' and
+       (self.precedence(self.stack[-1]) > self.precedence(token) or
+        (self.precedence(self.stack[-1]) == self.precedence(token) and
+         not self.is_right_associative(token)))): 
+    self.output.append(self.stack.pop())
+
+self.stack.append(token)
 """
 class Infix2Postfix:
     def __init__(self):
