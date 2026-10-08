@@ -8,6 +8,7 @@ class Node:
         self.data = data
         self.prev = None
         self.next = None
+#클래스
 
 class DoublyLinkedList:
     def __init__(self):
