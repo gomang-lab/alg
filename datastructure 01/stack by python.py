@@ -56,5 +56,8 @@ def eval(exp):
                 s.append(int(op1 / op2))
 
     return s.pop()
-exp = "123*-"
-print(eval(exp))
+# 메인 실행
+if __name__ == "__main__":
+    exp = "123*-"
+    print(eval(exp))
+# 결과 -5

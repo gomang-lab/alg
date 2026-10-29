@@ -32,19 +32,21 @@ def tree_to_array(root):
             queue.append((node.right, 2 * index + 2))
 
     return array
-#이진  트리 생성
-binary_tree_root = Node(2)
-binary_tree_root.left = Node(7)
-binary_tree_root.right = Node(52)
-binary_tree_root.left.left = Node(13)
-binary_tree_root.left.right = Node(8)
-binary_tree_root.right.left = Node(67)
-binary_tree_root.right.right = Node(161)
-binary_tree_root.left.left.left = Node(17)
-binary_tree_root.left.left.right = Node(43)
-binary_tree_root.left.right.left = Node(88)
-binary_tree_root.left.right.right = Node(37)
-
-# 결과 출력
-array_representation = tree_to_array(binary_tree_root)
-print(array_representation)
+# 메인 실행
+if __name__ == "__main__":
+    #이진  트리 생성
+    binary_tree_root = Node(2)
+    binary_tree_root.left = Node(7)
+    binary_tree_root.right = Node(52)
+    binary_tree_root.left.left = Node(13)
+    binary_tree_root.left.right = Node(8)
+    binary_tree_root.right.left = Node(67)
+    binary_tree_root.right.right = Node(161)
+    binary_tree_root.left.left.left = Node(17)
+    binary_tree_root.left.left.right = Node(43)
+    binary_tree_root.left.right.left = Node(88)
+    binary_tree_root.left.right.right = Node(37)
+    # 결과 출력
+    array_representation = tree_to_array(binary_tree_root)
+    print(array_representation)
+    #결과 [2, 7, 52, 13, 8, 67, 161, 17, 43, 88, 37]

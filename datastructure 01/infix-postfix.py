@@ -151,10 +151,10 @@ def evaluate_postfix(postfix):
 
     return stack[0]
 
-
+#메인실행
 if __name__ == "__main__":
     expression = "3.5+5*(2^3-40.11)^(2*1*2.0)-8.5"
     converter = Infix2Postfix()
     postfix = converter.infix_to_postfix(expression)
     print( evaluate_postfix(postfix))
-   
+#결과 5315337.16457205

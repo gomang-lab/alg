@@ -18,7 +18,7 @@ def treeSearch(t, x):
     else:
         return treeSearch(t.right, x)
 """
-# 노드 삽입하기
+# 노드 삽입하기 재귀 함수 이용
 def treeInsert(t, x):
     # 빈 자리를 만나면 새 노드 만들기
     if t is None:
@@ -32,7 +32,7 @@ def treeInsert(t, x):
         t.right = treeInsert(t.right, x)
     return t
 """
-# 반복문 노드 삽입
+# 반복문이용 노드 삽입
 def treeInsert(t, x):
     # 새 노드 r 생성 및 초기화 (r.key <- x, r.left <- NIL, r.right <- NIL)
     r = Node(x)
@@ -120,5 +120,8 @@ if __name__ == "__main__":
     # 3. 삭제
     deleteNode(root, 80)
     inorder(root)
-    
-    
+'''
+결과 
+20 30 40 50 60 70 80 성공
+20 30 40 50 60 70 
+'''    

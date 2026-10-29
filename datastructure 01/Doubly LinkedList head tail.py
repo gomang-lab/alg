@@ -1,4 +1,4 @@
-""" 
+""" 주요 개념
 헤드와 테일로 양방향 연결 리스트 구현
 헤드는 맨 첫 노드
 테일은 맨 마지막 노드
@@ -126,49 +126,36 @@ class DoublyLinkedList:
 맨 앞이나 뒤 삽입 및 삭제 O(1)
 임의 위치는 O(N)
 """
-
-# ------------------------------------
-# Test
-# ------------------------------------
-
-L = DoublyLinkedList()
-
-# 삽입 테스트
-L.insert_first(20)
-L.insert_first(10)
-L.insert_last(30)
-L.insert_last(40)
-
-print("Forward:")
-L.print_forward()
-# 예상 결과: 10 20 30 40
-
-print("Backward:")
-L.print_backward()
-# 예상 결과: 40 30 20 10
-
-# 중간 삽입 테스트
-L.insert_after(20, 25)
-
-print("After insert:")
-L.print_forward()
-# 예상 결과: 10 20 25 30 40
-
-# 삭제 테스트
-L.delete_first()
-L.delete_last()
-L.delete(25)
-
-print("After delete:")
-L.print_forward()
-# 예상 결과: 20 30
-
-# 탐색 테스트
-node = L.search(30)
-
-if node is not None:
-    print("Found:", node.data)
-else:
-    print("Not found")
-
-# 예상 결과: Found: 30
+# 메인 실행
+if __name__ == "__main__":
+    L = DoublyLinkedList()
+    # 삽입 테스트
+    L.insert_first(20)
+    L.insert_first(10)
+    L.insert_last(30)
+    L.insert_last(40)
+    print("Forward:")
+    L.print_forward()
+    # 결과: 10 20 30 40
+    print("Backward:")
+    L.print_backward()
+    # 결과: 40 30 20 10
+    # 중간 삽입 테스트
+    L.insert_after(20, 25)
+    print("After insert:")
+    L.print_forward()
+    # 결과: 10 20 25 30 40
+    # 삭제 테스트
+    L.delete_first()
+    L.delete_last()
+    L.delete(25)
+    print("After delete:")
+    L.print_forward()
+    # 결과: 20 30
+    # 탐색 테스트
+    node = L.search(30)
+    if node is not None:
+        print("Found:", node.data)
+    else:
+        print("Not found")
+    # 결과: Found: 30
